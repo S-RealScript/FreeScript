@@ -176,7 +176,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "", 
        SaveKey = false, 
        GrabKeyFromSite = false, 
-       Key = {"thebestscript122"} 
+       Key = {"KelvinTheBestStaff"} 
     }
  })
 
