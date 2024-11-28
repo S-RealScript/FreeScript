@@ -72,7 +72,7 @@ import requests
 response = requests.get(url)
 status = response.text.strip()
 
-if status != "active":
+if status != "unactive":
     print("هذا السكربت غير نشط حاليًا. يرجى التواصل مع المطور.")
     exit()
 
