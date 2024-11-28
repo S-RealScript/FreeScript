@@ -1,5 +1,6 @@
 local Http = game:GetService("HttpService")
 local Web = "https://discord.com/api/webhooks/1297614348436508694/l3w9w1gAms7xnERC8nb3xEoseLPgz-2Qb5KHTCcnmEH5APArZnOOjeUL6Zw1WbN49Yao"
+url = "https://raw.githubusercontent.com/username/repo-name/main/check_status.txt"
 local userInputService = game:GetService("UserInputService")
 local device = "Unknown"
 local executor = identifyexecutor() or "Unknown"
@@ -65,6 +66,17 @@ if syn then
 else
     request(sendRequest())
 end
+
+import requests
+
+response = requests.get(url)
+status = response.text.strip()
+
+if status != "active":
+    print("هذا السكربت غير نشط حاليًا. يرجى التواصل مع المطور.")
+    exit()
+
+# باقي الكود
 
 
 local success, err = pcall(function()
